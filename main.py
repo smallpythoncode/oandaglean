@@ -24,7 +24,7 @@ def retrieve_config():
 
 
 
-
+# gpgtest
 def main():
     account_id, access_token = retrieve_config()
 
