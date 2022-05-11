@@ -19,17 +19,21 @@ def retrieve_config():
     config.read(file)
     account_id = config["oanda"]["account_id"]
     access_token = config["oanda"]["access_token"]
+    configuration = {"account_id": account_id, "access_token": access_token}
 
-    return account_id, access_token
+    return configuration
 
 
+# TODO
+def initialize_config():
+    pass
 
-# gpgtest
+
 def main():
-    account_id, access_token = retrieve_config()
+    config = retrieve_config()
 
-    print("ID:", account_id)
-    print("Token:", access_token)
+    print("ID:", config["account_id"])
+    print("Token:", config["access_token"])
 
 
 if __name__ == "__main__":
